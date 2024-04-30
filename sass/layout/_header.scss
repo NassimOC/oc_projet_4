@@ -1,0 +1,37 @@
+.header__main {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 63px;
+
+    img {
+      width: 162px;
+      flex: 0 1 auto;
+      position: absolute;
+      /* A verifier */
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .fa-solid {
+     font-size: 24px;
+     margin-left: 20px;
+    }
+}
+
+.header__location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: #EAEAEA;
+
+    p {
+      margin-left: 20px;
+      font-weight: 500;
+    }
+    
+    .fa-solid {
+      font-size: 16px;
+    }
+}
