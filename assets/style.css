@@ -25,6 +25,9 @@ a {
   align-items: center;
   justify-content: flex-start;
   height: 63px;
+  position: relative;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  z-index: 2;
 }
 .header__main img {
   width: 162px;
@@ -34,9 +37,11 @@ a {
   left: 50%;
   transform: translateX(-50%);
 }
+.header__main a {
+  margin-left: 20px;
+}
 .header__main .fa-solid {
   font-size: 24px;
-  margin-left: 20px;
 }
 
 .header__location {
@@ -45,6 +50,7 @@ a {
   align-items: center;
   height: 50px;
   background-color: #EAEAEA;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .header__location p {
   margin-left: 20px;
