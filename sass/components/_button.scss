@@ -1,0 +1,14 @@
+.btn {
+  background: $button-color;
+  width: 218px;
+  color: #FFFFFF;
+  padding: 15px 0;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.25);
+  transition: opacity 0.5s, box-shadow 0.5s;
+
+    &:hover {
+      opacity: 0.8;
+      box-shadow: 0 4px 10px 4px rgba(0,0,0,0.20);
+    }
+}
