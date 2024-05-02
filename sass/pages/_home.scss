@@ -21,36 +21,52 @@
 }
 
 .instructions {
+  padding: 50px 0;
 
     &__title {
-      margin: 40px 0 20px 20px;
+      margin: 0 0 30px 20px;
     }
 
-    &__step {
+    &__grid {
       display: flex;
-      align-items: center;
-      font-weight: 500;
-      margin-right: 20px;
-      margin-left: 40px;
-      height: 72px;
-      border: solid 1px red;
-      border-radius: 20px;
-      box-shadow: 0 4px 15px 0 rgba(0,0,0,0.15);
+      flex-direction: column;
+      gap: 20px;
     }
 }
 
-.instructions__step > .instructions__step__icon {
-  color: #7E7E7E;
-  font-size: 20px;
-  margin-left: 34px;
-  margin-right: 26px;
+.instructions__step {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  margin-right: 20px;
+  margin-left: 40px;
+  height: 72px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px 0 rgba(0,0,0,0.15);
+
+    &__icon {
+      color: #7E7E7E;
+      font-size: 20px;
+      width: 20px;
+      margin-left: 34px;
+      margin-right: 26px;
+    }
+
+    &__order {
+      position: absolute;
+      background-color: #9356DC;
+      height: 24px;
+      width: 24px;
+      border-radius: 20px;
+      left: 29px;
+      color: #FFFFFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.9em;
+    }
 }
 
-.instructions__step > .instructions__step__order {
-  position: absolute;
-  background-color: #9356DC;
-  height: 24px;
-  width: 24px;
-  border-radius: 20px;
-  left: 29px;
+.instructions__step > .instructions__step__icon--coloured {
+  color: $main-color;
 }

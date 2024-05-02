@@ -95,9 +95,18 @@ a {
   margin-top: 14px;
 }
 
-.instructions__title {
-  margin: 40px 0 20px 20px;
+.instructions {
+  padding: 50px 0;
 }
+.instructions__title {
+  margin: 0 0 30px 20px;
+}
+.instructions__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .instructions__step {
   display: flex;
   align-items: center;
@@ -105,25 +114,32 @@ a {
   margin-right: 20px;
   margin-left: 40px;
   height: 72px;
-  border: solid 1px red;
   border-radius: 20px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
-
-.instructions__step > .instructions__step__icon {
+.instructions__step__icon {
   color: #7E7E7E;
   font-size: 20px;
+  width: 20px;
   margin-left: 34px;
   margin-right: 26px;
 }
-
-.instructions__step > .instructions__step__order {
+.instructions__step__order {
   position: absolute;
   background-color: #9356DC;
   height: 24px;
   width: 24px;
   border-radius: 20px;
   left: 29px;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9em;
+}
+
+.instructions__step > .instructions__step__icon--coloured {
+  color: #9356DC;
 }
 
 /*# sourceMappingURL=style.css.map */
