@@ -62,10 +62,22 @@ footer {
   padding-left: 20px;
   padding-bottom: 20px;
 }
+@media screen and (min-width: 760px) {
+  footer {
+    height: 100px;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+  }
+}
 
 .footer__logo {
   font-family: Shrikhand;
   color: white;
+}
+@media screen and (min-width: 760px) {
+  .footer__logo {
+    margin: 0 50px;
+  }
 }
 
 .footer-list {
@@ -76,6 +88,11 @@ footer {
   padding: 0;
   margin: 0;
   gap: 7px;
+}
+@media screen and (min-width: 760px) {
+  .footer-list {
+    flex-direction: row;
+  }
 }
 .footer-list__link {
   font-size: 0.9em;
@@ -88,6 +105,11 @@ footer {
   color: #FFFFFF;
   font-size: 12px;
   margin-right: 8px;
+}
+@media screen and (min-width: 760px) {
+  .footer-list > .footer-list__link--gap {
+    margin-left: 20px;
+  }
 }
 
 .btn {
@@ -141,6 +163,11 @@ footer {
 .intro__title {
   margin: 0 60px;
 }
+@media screen and (min-width: 760px) {
+  .intro__title {
+    font-size: 2em;
+  }
+}
 .intro__content {
   font-weight: 300;
   margin: 16px;
@@ -156,6 +183,10 @@ footer {
 .instructions {
   padding: 50px 0;
 }
+.instructions__container {
+  max-width: 1080px;
+  margin: auto;
+}
 .instructions__grid {
   display: flex;
   flex-direction: column;
@@ -164,13 +195,26 @@ footer {
   margin-right: 20px;
   margin-left: 40px;
 }
+@media screen and (min-width: 760px) {
+  .instructions__grid {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 760px) {
+  .instructions__grid {
+    justify-content: center;
+    gap: 30px;
+  }
+}
 
 .instructions__step {
   display: flex;
   align-items: center;
+  position: relative;
   font-weight: 500;
   height: 72px;
   border-radius: 20px;
+  padding-right: 10px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 .instructions__step__icon {
@@ -186,12 +230,17 @@ footer {
   height: 24px;
   width: 24px;
   border-radius: 20px;
-  left: 29px;
+  left: -11px;
   color: #FFFFFF;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 0.9em;
+}
+@media screen and (min-width: 760px) {
+  .instructions__step {
+    flex-grow: 1;
+  }
 }
 
 .instructions__step > .instructions__step__icon--coloured {
@@ -201,6 +250,10 @@ footer {
 .restaurants {
   background-color: #F6F6F6;
   padding: 50px 0;
+}
+.restaurants__container {
+  max-width: 1080px;
+  margin: auto;
 }
 .restaurants__grid {
   display: flex;
