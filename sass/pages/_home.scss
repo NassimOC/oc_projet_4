@@ -62,6 +62,7 @@
   height: 72px;
   border-radius: 20px;
   padding-right: 10px;
+  background-color: #F6F6F6; 
   @include box-shadow(0.15);
 
     &__icon {
@@ -108,6 +109,16 @@
       flex-direction: column;
       gap: 20px;
       margin: 30px 20px;
+      @include mediaq;
+      @media screen and (min-width:$breakpoint) {
+        flex-wrap: wrap;
+        column-gap: 84px;
+        row-gap: 50px;
+
+        & > .card {
+          flex: 1 1 40%;
+        }
+      }
     }
 }
 
@@ -148,6 +159,7 @@
     &__text {
       font-weight: 300;
     }
+
 }
 
 .new-alert {
