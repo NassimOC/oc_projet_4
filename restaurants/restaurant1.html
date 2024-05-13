@@ -25,19 +25,86 @@
     <main class="restaurant">
       <div class="restaurant__title">
         <h1 class="restaurant__title__name">La palette du goût</h1>
-        <i class="fa-regular fa-heart card__like card__like--empty"></i>
+        <div class="like-container">
+          <i class="fa-regular fa-heart restaurant__title__like card__like card__like--empty"></i>
+        <i class="fa-solid fa-heart card__like card__like--filled"></i>
+        </div> 
       </div>
       <section class="restaurant-menu">
         <h2 class="restaurant-menu__title">ENTRÉES</h2>
         <div class="restaurant-menu__line"></div>
-        <article>
-          <div>
-            <h3>Fricassée d'escargots</h3>
-            <p>Au piment d'Espelette</p>
+        <article class="restaurant-card">
+          <div class="restaurant-card__main">
+            <h3 class="restaurant-card__name">Fricassée d'escargots</h3>
+            <p class="restaurant-card__content">Au piment d'Espelette</p>
           </div>
-          <p>25€</p>
+          <p class="restaurant-card__price">25€</p>
+        </article>
+        <article class="restaurant-card">
+          <div class="restaurant-card__main">
+            <h3 class="restaurant-card__name">Foie gras de canard mi-cuit</h3>
+            <p class="restaurant-card__content">Et ses copeaux de truffe noire</p>
+          </div>
+          <p class="restaurant-card__price">35€</p>
+        </article>
+        <article class="restaurant-card">
+          <div class="restaurant-card__main">
+            <h3 class="restaurant-card__name">Œuf au plat</h3>
+            <p class="restaurant-card__content">Assaisonné à la truffe sur lit de caviar</p>
+          </div>
+          <p class="restaurant-card__price">20€</p>
+        </article>
+        <h2 class="restaurant-menu__title">PLATS</h2>
+        <div class="restaurant-menu__line"></div>
+        <article class="restaurant-card">
+          <div class="restaurant-card__main">
+            <h3 class="restaurant-card__name">Filet de bœuf aux herbes</h3>
+            <p class="restaurant-card__content">Accompagné de sa ribambelle de légumes</p>
+          </div>
+          <p class="restaurant-card__price">40€</p>
+        </article>
+        <article class="restaurant-card">
+          <div class="restaurant-card__main">
+            <h3 class="restaurant-card__name">Parmentier de queue de bœuf</h3>
+            <p class="restaurant-card__content">À la truffe noire sur sa purée de panais</p>
+          </div>
+          <p class="restaurant-card__price">35€</p>
+        </article>
+        <article class="restaurant-card">
+          <div class="restaurant-card__main">
+            <h3 class="restaurant-card__name">Filet de turbot</h3>
+            <p class="restaurant-card__content">Aux agrumes</p>
+          </div>
+          <p class="restaurant-card__price">44€</p>
+        </article>
+        <h2 class="restaurant-menu__title">DESSERTS</h2>
+        <div class="restaurant-menu__line"></div>
+        <article class="restaurant-card">
+          <div class="restaurant-card__main">
+            <h3 class="restaurant-card__name">Paris-Brest</h3>
+            <p class="restaurant-card__content">Revisité</p>
+          </div>
+          <p class="restaurant-card__price">18€</p>
+        </article>
+        <article class="restaurant-card">
+          <div class="restaurant-card__main">
+            <h3 class="restaurant-card__name">Macaron au chocolat d'exception </h3>
+            <p class="restaurant-card__content">Et glace à la vanille de Madagascar</p>
+          </div>
+          <p class="restaurant-card__price">22€</p>
+        </article>
+        <article class="restaurant-card">
+          <div class="restaurant-card__main">
+            <h3 class="restaurant-card__name">Mousse au chocolat </h3>
+            <p class="restaurant-card__content">Au piment d'Espelette et à la truffe noire</p>
+          </div>
+          <p class="restaurant-card__price">23€</p>
         </article>
       </section>
+      <div class="order">
+        <a class="btn btn--order " href="#">Commander</a>
+      </div>
+      
     </main>
   </div>
   <footer>
@@ -52,7 +119,9 @@
         Devenir partenaire
       </li>
       <li class="footer-list__link footer-list__link--thin footer-list__link--gap">Mentions légales</li>
-      <li class="footer-list__link footer-list__link--thin">Contact</li>
+      <li class="footer-list__link footer-list__link--thin">
+        <a href="mailto:ohmyfood@example.com">Contact</a>
+      </li>
     </ul>
   </footer>
 </body>

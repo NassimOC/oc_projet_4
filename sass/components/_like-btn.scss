@@ -1,5 +1,6 @@
 .like-container {
   position: relative;
+
     &:hover {
       .card__like--filled {
         opacity: 1;
@@ -11,7 +12,7 @@
 }
 
 .card__like {
-  font-size: 24px;
+  font-size: 26px;
   transition: opacity 250ms;
 
     &--filled {
