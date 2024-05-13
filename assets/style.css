@@ -4,8 +4,6 @@
 
 body {
   margin: 0;
-  display: flex;
-  justify-content: center;
 }
 
 a {
@@ -248,32 +246,32 @@ footer {
   color: #9356DC;
 }
 
-.restaurants {
+.restaurants-list {
   background-color: #F6F6F6;
   padding: 50px 0;
 }
-.restaurants__container {
+.restaurants-list__container {
   max-width: 1080px;
   margin: auto;
 }
-.restaurants__grid {
+.restaurants-list__grid {
   display: flex;
   flex-direction: column;
   gap: 20px;
   margin: 30px 20px;
 }
 @media screen and (min-width: 760px) {
-  .restaurants__grid {
+  .restaurants-list__grid {
     flex-direction: row;
   }
 }
 @media screen and (min-width: 760px) {
-  .restaurants__grid {
+  .restaurants-list__grid {
     flex-wrap: wrap;
     column-gap: 84px;
     row-gap: 50px;
   }
-  .restaurants__grid > .card {
+  .restaurants-list__grid > .card {
     flex: 1 1 40%;
   }
 }
@@ -326,6 +324,39 @@ footer {
   color: #278870;
   font-weight: 500;
   font-size: 0.8em;
+}
+
+.restaurant-image {
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+.restaurant {
+  background-color: #f6f6f6;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding: 0 20px;
+  margin-top: -50px;
+}
+.restaurant__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.restaurant__title__name {
+  font-family: Shrikhand;
+}
+
+.restaurant-menu__title {
+  font-weight: 300;
+  font-size: 1.2em;
+  margin: 0;
+}
+.restaurant-menu__line {
+  width: 40px;
+  border: 2px solid #99E2D0;
+  margin-top: 4px;
 }
 
 /*# sourceMappingURL=style.css.map */
