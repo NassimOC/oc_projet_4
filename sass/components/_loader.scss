@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   background-color: #F6F6F6;
-  animation: loader-end 3s forwards;
+  animation: loader-end 2s forwards 2s;
 }
 
 .loader {
@@ -53,9 +53,10 @@
 
 @keyframes loader-end {
   from {
+    transform: translateY(0);
   }
   to {
-    display: none;
+    transform: translateY(-9999px);
   }
 }
 
