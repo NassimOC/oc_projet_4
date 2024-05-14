@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   background-color: #F6F6F6;
-  animation: loader-end 2s forwards 2s;
+  animation: loader-end $loader-duration forwards;
 }
 
 .loader {
@@ -22,11 +22,11 @@
     border-radius: 50%;
     height: 45px;
     width: 45px;
-    animation: loading 1s backwards infinite ease-in-out alternate;
+    animation: loading 700ms both infinite ease-in-out alternate;
 
     @for $i from 1 through 3 {
       &--#{$i} {
-        animation-delay: 300ms * $i;
+        animation-delay: 200ms * $i;
       }
     }
 
@@ -52,11 +52,10 @@
 }
 
 @keyframes loader-end {
-  from {
+  0%,80% {
     transform: translateY(0);
   }
-  to {
+  100% {
     transform: translateY(-9999px);
   }
 }
-

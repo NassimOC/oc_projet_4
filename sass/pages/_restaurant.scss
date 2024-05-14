@@ -43,23 +43,36 @@
       font-size: 1.1em;
       margin: 0;
       margin-top: 24px;
+      animation: slide-menu $slide-duration ease-in-out backwards;
+      @for $i from 1 through 3 {
+        &--#{$i} {
+          animation-delay: $slide-duration * $i;
+        }
+      }
     }
     
     &__line {
       width: 40px;
       border: 2px solid $third-color;
       margin-top: 4px;
+      animation: slide-menu $slide-duration ease-in-out backwards;
+      @for $i from 1 through 3 {
+        &--#{$i} {
+          animation-delay: $slide-duration * $i;
+        }
+      }
     }
 }
 
 .restaurant-card {
+  position: relative;
   height: 70px;
   display: flex;
   justify-content: space-between;
   background-color: white;
   border-radius: 15px;
   margin-top: 14px;
-  padding:0 14px;
+  padding:0;
   @include box-shadow(0.1);
 
     &__main {
@@ -68,6 +81,8 @@
       justify-content: center;
       gap: 7px;
       width: 80%;
+      transition: all 0.5s ease-in-out;
+      margin-left: 10px;
     }
   
     &__name, &__content {
@@ -80,11 +95,70 @@
     &__price {
       align-self: flex-end;
       font-weight: 700;
+      margin-right: 10px;
     }
+    
+    &:hover .restaurant-card__main {
+      width: 60%;
+    }
+
+    &:hover .check-container {
+      width: 50px;
+      opacity: 1;
+    }
+
+    &:hover .check-container__icon {
+      font-size: 24px;
+      opacity: 1;
+    }
+
+  animation: slide-menu $slide-duration ease-in-out backwards;
+  @for $i from 1 through 3 {
+    &--#{$i} {
+      animation-delay: $slide-duration * $i;
+    }
+  }
+
+}
+
+.check-container {
+  background-color: $third-color;
+  height: 70px;
+  width:0px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+
+  &__icon {
+    color: white;
+    font-size: 0;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+
+.restaurant-card__rightsection {
+  display: flex;
 }
 
 .order {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@keyframes slide-menu {
+  from {
+    transform: translateX(-999px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
