@@ -1,0 +1,61 @@
+.loader-container {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F6F6F6;
+  animation: loader-end 3s forwards;
+}
+
+.loader {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 8px;
+
+  &__dot {
+    background-color: $secondary-color;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    animation: loading 1s backwards infinite ease-in-out alternate;
+
+    @for $i from 1 through 3 {
+      &--#{$i} {
+        animation-delay: 300ms * $i;
+      }
+    }
+
+    &--1 {
+      background-color: $secondary-color;
+    }
+    &--2 {
+      background-color: mix($main-color, $secondary-color);
+    }
+    &--3 {
+      background-color: $main-color;
+    }
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes loader-end {
+  from {
+  }
+  to {
+    display: none;
+  }
+}
+

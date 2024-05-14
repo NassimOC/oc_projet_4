@@ -110,6 +110,64 @@ footer {
   }
 }
 
+.loader-container {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F6F6F6;
+  animation: loader-end 3s forwards;
+}
+
+.loader {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 8px;
+}
+.loader__dot {
+  background-color: #FF79DA;
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  animation: loading 1s backwards infinite ease-in-out alternate;
+}
+.loader__dot--1 {
+  animation-delay: 300ms;
+}
+.loader__dot--2 {
+  animation-delay: 600ms;
+}
+.loader__dot--3 {
+  animation-delay: 900ms;
+}
+.loader__dot--1 {
+  background-color: #FF79DA;
+}
+.loader__dot--2 {
+  background-color: #c968db;
+}
+.loader__dot--3 {
+  background-color: #9356DC;
+}
+
+@keyframes loading {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes loader-end {
+  to {
+    display: none;
+  }
+}
 .btn {
   background: linear-gradient(#FF79DA, #9356DC);
   color: #FFFFFF;
