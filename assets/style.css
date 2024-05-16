@@ -1,3 +1,29 @@
+@keyframes loading {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes loader-end {
+  0%, 80% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-999px);
+  }
+}
+@keyframes slide-menu {
+  from {
+    transform: translateX(-999px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 * {
   font-family: "Roboto", "sans-serif";
 }
@@ -155,29 +181,13 @@ footer {
   background-color: #9356DC;
 }
 
-@keyframes loading {
-  0% {
-    transform: scale(0.5);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes loader-end {
-  0%, 80% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-9999px);
-  }
-}
 .btn {
   background: linear-gradient(#FF79DA, #9356DC);
   color: #FFFFFF;
   padding: 15px 0;
   border-radius: 25px;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
-  transition: opacity 0.5s, box-shadow 0.5s;
+  transition: all 500ms;
   text-align: center;
 }
 .btn:hover {
@@ -202,6 +212,18 @@ footer {
 }
 .like-container:hover .card__like--empty {
   opacity: 0;
+}
+.like-container--inv .card__like {
+  opacity: 0;
+}
+.like-container--inv .card__like--filled {
+  opacity: 1;
+}
+.like-container--inv:hover .card__like--filled {
+  opacity: 0;
+}
+.like-container--inv:hover .card__like--empty {
+  opacity: 1;
 }
 
 .card__like {
@@ -315,7 +337,7 @@ footer {
 
 .restaurants-list {
   background-color: #F6F6F6;
-  padding: 50px 0;
+  padding: 50px 0 20px 0;
 }
 .restaurants-list__container {
   max-width: 1080px;
@@ -406,7 +428,7 @@ footer {
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   padding: 0 20px;
-  margin-top: -50px;
+  margin-top: -80px;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 40px;
@@ -416,7 +438,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-right: 24px;
+  padding-right: 14px;
 }
 .restaurant__title__name {
   font-family: Shrikhand;
@@ -429,14 +451,14 @@ footer {
 }
 
 .restaurant-menu {
-  max-width: 800px;
+  max-width: 700px;
   margin: auto;
 }
 .restaurant-menu__title {
   font-weight: 300;
   font-size: 1.1em;
   margin: 0;
-  margin-top: 24px;
+  margin-top: 28px;
   animation: slide-menu 0.5s ease-in-out backwards;
 }
 .restaurant-menu__title--1 {
@@ -544,17 +566,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-@keyframes slide-menu {
-  from {
-    transform: translateX(-999px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

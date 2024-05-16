@@ -10,6 +10,24 @@
         opacity: 0;
       }
     }
+    
+  &--inv {
+    .card__like {
+      opacity: 0;
+    }
+    .card__like--filled {
+      opacity: 1;
+    }
+  
+    &:hover {
+      .card__like--filled {
+        opacity: 0;
+      }
+      .card__like--empty {
+        opacity: 1;
+      }
+    }
+  }    
 }
 
 .card__like {
