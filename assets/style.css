@@ -11,7 +11,7 @@
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-999px);
+    transform: translateY(-9999px);
   }
 }
 @keyframes slide-menu {
@@ -488,6 +488,7 @@ footer {
 
 .restaurant-card {
   position: relative;
+  cursor: pointer;
   height: 70px;
   display: flex;
   justify-content: space-between;
