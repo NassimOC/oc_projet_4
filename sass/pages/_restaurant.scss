@@ -15,7 +15,7 @@
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 40px;
-  max-width: 1000px;
+  max-width: $maxwidth;
 
     &__title {
       display: flex;
@@ -125,7 +125,7 @@
 .check-container {
   background-color: $third-color;
   height: 70px;
-  width:0px;
+  width: 0px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   align-items: center;
